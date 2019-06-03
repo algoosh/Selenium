@@ -1,6 +1,6 @@
 package com.class9;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class WebDriverDemo extends CommonMethods{
 

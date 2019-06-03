@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 /*task
 Ahead to https://jqueryui.com/droppable/
 handle the frame

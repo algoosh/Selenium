@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class hoverOver extends CommonMethods {
 

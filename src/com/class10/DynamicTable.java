@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class DynamicTable extends CommonMethods{
 

@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class TaskTwo extends CommonMethods {
 /* Verify element is clickable1.Open chrome browser2.Go to “https://the-internet.herokuapp.com/”3.

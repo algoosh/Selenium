@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class ClassTask1 extends CommonMethods {
 /*TC 1: ToolsQA Frame verification

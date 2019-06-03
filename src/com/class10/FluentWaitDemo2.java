@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.FluentWait;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class FluentWaitDemo2 extends CommonMethods{
 

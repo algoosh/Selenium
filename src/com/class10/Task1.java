@@ -5,7 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class Task1 extends CommonMethods {
 /*Table headers and rows verification

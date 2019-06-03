@@ -2,7 +2,7 @@ package com.class10;
 
 import org.openqa.selenium.By;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class Task2 extends CommonMethods{
 /*Table headers and rows verification

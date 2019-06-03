@@ -4,7 +4,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class HomeworkClass8 extends CommonMethods {
 	    static String Url = "https://the-internet.herokuapp.com/";

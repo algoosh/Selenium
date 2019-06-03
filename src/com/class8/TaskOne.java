@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import com. utils.CommonMethods;
+import utils.CommonMethods;
 public class TaskOne extends CommonMethods {
 /*Task One
 Ahead to http://uitestpractice.com/Students/Index

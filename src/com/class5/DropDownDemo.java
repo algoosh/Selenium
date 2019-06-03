@@ -27,6 +27,9 @@ Thread.sleep(6000);
 List<WebElement> allOptions=obj.getOptions();
 System.out.println(allOptions.size());
 
+Thread.sleep(5000);
+driver.quit();
+
 ///yes!
 
 		/*WebElement continentDD = driver.findElement(By.id("continents"));

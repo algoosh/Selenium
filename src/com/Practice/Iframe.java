@@ -2,7 +2,7 @@ package com.Practice;
 
 import org.openqa.selenium.By;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class Iframe extends CommonMethods {
 	

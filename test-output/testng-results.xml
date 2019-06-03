@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55" started-at="2019-05-28T22:25:10Z" finished-at="2019-05-28T22:25:10Z">
+  <suite name="Default suite" duration-ms="11062" started-at="2019-06-02T17:01:49Z" finished-at="2019-06-02T17:02:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55" started-at="2019-05-28T22:25:10Z" finished-at="2019-05-28T22:25:10Z">
-      <class name="com.class9.test">
-        <test-method status="PASS" signature="helloWorld()[pri:0, instance:com.class9.test@5d5eef3d]" name="helloWorld" duration-ms="22" started-at="2019-05-28T22:25:10Z" finished-at="2019-05-28T22:25:10Z">
+    <test name="Default test" duration-ms="11062" started-at="2019-06-02T17:01:49Z" finished-at="2019-06-02T17:02:00Z">
+      <class name="com.class12.BrokenLinks">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:com.class12.BrokenLinks@4678c730]" name="startBrowser" is-config="true" duration-ms="10975" started-at="2019-06-02T17:01:49Z" finished-at="2019-06-02T17:02:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- helloWorld -->
-      </class> <!-- com.class9.test -->
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="brokenLinksVerification()[pri:0, instance:com.class12.BrokenLinks@4678c730]" name="brokenLinksVerification" duration-ms="52" started-at="2019-06-02T17:02:00Z" finished-at="2019-06-02T17:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- brokenLinksVerification -->
+      </class> <!-- com.class12.BrokenLinks -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

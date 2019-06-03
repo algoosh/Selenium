@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 /*Task Two
 Ahead to http://uitestpractice.com/Students/Index
 Click on the Actions

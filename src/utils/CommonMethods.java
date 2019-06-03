@@ -1,19 +1,29 @@
 package utils;
 
+import java.io.File;
+import java.io.IOException;
+
 //Command O ---> will give all the methods that are exist in THAT class
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonMethods {
 
@@ -28,13 +38,13 @@ public class CommonMethods {
 	public static void setUpDriver(String browser, String url) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			// For mac
-			System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver.exe");
 			// for windows
 			// System.setProperty("webdriver.chrome.driver",
 			// "src/drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "src/drivers/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "src/drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else {
 			System.out.println("browser given is wrong");
@@ -218,31 +228,87 @@ public class CommonMethods {
 
 		}
 	}
-	
+
 	/**
 	 * Method that will handle radio buttons
+	 * 
 	 * @param WebElement element
 	 */
-	
+
 	public static void clickRadioButton(WebElement element) {
 		element.click();
 	}
-	
+
 	/**
 	 * Method clicks check boxes
 	 * 
 	 */
-	
+
 	public static void clickCheckBoxes(WebElement element) {
 		element.click();
 	}
-	
+
 	/**
 	 * Method double clicks
+	 * 
 	 * @param WebElement element
 	 */
 	public static void doubleClick(WebElement element) {
 		Actions action = new Actions(driver);
 		action.doubleClick(element).perform();
+	}
+
+	public static void takeScreenshot(String folderName, String fileName) {
+		TakesScreenshot ts=(TakesScreenshot)driver;
+        File scr=ts.getScreenshotAs(OutputType.FILE);
+        
+        try {
+			FileUtils.copyFile(scr, new File("screenshots/"+folderName+"/"+fileName+".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Unable to take screesnhot");
+		}
+        
+	}
+	
+	/**
+	 * Method that will wait for element to be visible
+	 * 
+	 * @param WebElement element, int time
+	 */
+	
+	public static void waitForElementBeVisible(WebElement element, int time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
+	public static void waitForElementBeVisible(By locator, int time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+
+	public static void waitForElementBeClickable(WebElement element, int time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	public static void waitForElementBeClickable(By locator, int time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+	public static void scrollDown(int pixels) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,"+pixels+")");
+	}
+	
+	public static void scrollUp(int pixels) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,-"+pixels+")");
+	}
+	
+	public static void jsClick(WebElement element) {
+		
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", element);
 	}
 }

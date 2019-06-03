@@ -3,7 +3,7 @@ package com.class7;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.utils.CommonMethods;
+import utils.CommonMethods;
 
 public class iframe extends CommonMethods {
 
