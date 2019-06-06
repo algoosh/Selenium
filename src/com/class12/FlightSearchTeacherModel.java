@@ -36,7 +36,7 @@ public class FlightSearchTeacherModel extends CommonMethods {
 		driver.findElement(By.xpath("//input[@id='aa-leavingOn']/following-sibling::button")).click();
 		// grab element that holds month & year
 		WebElement depMonth = driver.findElement(By.xpath("//div[contains(@class, 'ui-corner-left')]/div"));
-
+		Thread.sleep(5000);
 		while (!depMonth.getText().contains("October")) {
 			driver.findElement(By.xpath("//a[@title='Next']")).click();
 			// if we wont perform this action we will get
@@ -44,6 +44,7 @@ public class FlightSearchTeacherModel extends CommonMethods {
 			// attached to the page document
 			depMonth = driver.findElement(By.xpath("//div[contains(@class, 'ui-corner-left')]/div"));
 		}
+		Thread.sleep(5000);
 		// capturing all cell and then loop and search for specific date
 		List<WebElement> depCells = driver
 				.findElements(By.xpath("//div[contains(@class, 'group-first')]/table/tbody/tr/td"));
@@ -52,12 +53,14 @@ public class FlightSearchTeacherModel extends CommonMethods {
 				cell.click();
 				break;
 			}
+			Thread.sleep(5000);
 		}
 		// selecting arrival details
 
 		// click on calendar icon
 		driver.findElement(By.xpath("//input[@id='aa-returningFrom']/following-sibling::button")).click();
 		// grab element that holds month & year
+		Thread.sleep(5000);
 		WebElement arrMonth = driver.findElement(By.xpath("//div[contains(@class, 'ui-corner-right')]/div"));
 
 		while (!arrMonth.getText().contains("December")) {
@@ -67,6 +70,7 @@ public class FlightSearchTeacherModel extends CommonMethods {
 			// attached to the page document
 			arrMonth = driver.findElement(By.xpath("//div[contains(@class, 'ui-corner-right')]/div"));
 		}
+		Thread.sleep(5000);
 		// capturing all cell and then loop and search for specific date
 		List<WebElement> arrCells = driver
 				.findElements(By.xpath("//div[contains(@class, 'group-last')]/table/tbody/tr/td"));
